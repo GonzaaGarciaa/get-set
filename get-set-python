@@ -1,0 +1,59 @@
+class Persona():
+    def __init__(self, edad, nombre, telefono):
+        self._edad = edad
+        self._nombre = nombre
+        self._telefono = telefono
+        
+    # getter edad
+    @property
+    def edad(self):
+        return self._edad
+    
+    # setter edad
+    @edad.setter
+    def edad(self, new_edad):
+        if new_edad > 0:
+            self._edad = new_edad
+        else:
+            print("Ingrese un valor valido")
+            
+    
+    # getter nombre
+    @property
+    def nombre(self):
+        return self._nombre
+    
+    # seter nombre
+    @nombre.setter
+    def nombre(self, new_nombre):
+        if new_nombre != int:
+            self._nombre = new_nombre
+        else:
+            print("Ingrese un valor valido")
+            
+            
+    # getter telefono
+    @property
+    def telefono(self):
+        return self._telefono
+    
+    # setter telefono
+    @telefono.setter
+    def telefono(self, new_telefono):
+        if new_telefono > 0:
+            self._telefono = new_telefono
+        else:
+            print("Ingrese un valor valido")
+    
+
+# Objeto de la clase persona
+persona_1 = Persona(27,"Gonzalo",470420)
+
+persona_1.edad = 15      # setter
+print(persona_1.edad)    # getter
+
+persona_1.nombre = "Roberto"
+print(persona_1.nombre)
+
+persona_1.telefono = 425859
+print(persona_1.telefono)
